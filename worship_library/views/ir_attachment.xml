@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2019 Denis Roussel
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <!--
+    <record model="ir.ui.view" id="ir_attachment_form_view">
+        <field name="name">ir.attachment.form (in worship_library)</field>
+        <field name="model">ir.attachment</field>
+        <field name="inherit_id" ref="TODO othermodule.form_view"/>
+        <field name="arch" type="xml">
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="ir_attachment_search_view">
+        <field name="name">ir.attachment.search (in worship_library)</field>
+        <field name="model">ir.attachment</field>
+        <field name="inherit_id" ref="TODO othermodule.search_view"/>
+        <field name="arch" type="xml">
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="ir_attachment_tree_view">
+        <field name="name">ir.attachment.tree (in worship_library)</field>
+        <field name="model">ir.attachment</field>
+        <field name="inherit_id" ref="TODO othermodule.tree_view"/>
+        <field name="arch" type="xml">
+        </field>
+    </record>
+    -->
+    <record model="ir.actions.act_window" id="ir_attachment_category_act_window">
+        <field name="name">Categories</field>
+        <field name="res_model">ir.attachment.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('worship_related', '=', True)]</field>
+        <field name="context" eval="{'default_worship_related': True}"/>
+    </record>
+
+    <record model="ir.actions.act_window" id="ir_attachment_act_window">
+        <field name="name">Documents</field>
+        <field name="res_model">ir.attachment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('worship_related', '=', True)]</field>
+        <field name="context" eval="{'default_worship_related': True}"/>
+        <field name="sequence" eval="1"/>
+    </record>
+
+    <!-- MENUS -->
+    <!-- LIBRARY ROOT -->
+    <record model="ir.ui.menu" id="worship_library_root">
+        <field name="name">Library</field>
+        <field name="parent_id" ref="worship.worship_menu_root"/>
+        <field name="sequence" eval="16"/>
+    </record>
+
+    <record model="ir.ui.menu" id="ir_attachment_category_menu">
+        <field name="name">Categories</field>
+        <field name="res_model">ir.attachment.category</field>
+        <field name="parent_id" ref="worship_library_root"/>
+        <field name="action" ref="ir_attachment_category_act_window"/>
+        <field name="sequence" eval="1"/>
+    </record>
+     <record model="ir.ui.menu" id="ir_attachment_menu">
+        <field name="name">Documents</field>
+        <field name="res_model">ir.attachment</field>
+        <field name="parent_id" ref="worship_library_root"/>
+        <field name="action" ref="ir_attachment_act_window"/>
+        <field name="sequence" eval="2"/>
+    </record>
+
+
+</odoo>
