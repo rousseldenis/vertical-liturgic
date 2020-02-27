@@ -3,31 +3,7 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
 <odoo>
-    <!--
-    <record model="ir.ui.view" id="ir_attachment_form_view">
-        <field name="name">ir.attachment.form (in worship_library)</field>
-        <field name="model">ir.attachment</field>
-        <field name="inherit_id" ref="TODO othermodule.form_view"/>
-        <field name="arch" type="xml">
-        </field>
-    </record>
-
-    <record model="ir.ui.view" id="ir_attachment_search_view">
-        <field name="name">ir.attachment.search (in worship_library)</field>
-        <field name="model">ir.attachment</field>
-        <field name="inherit_id" ref="TODO othermodule.search_view"/>
-        <field name="arch" type="xml">
-        </field>
-    </record>
-
-    <record model="ir.ui.view" id="ir_attachment_tree_view">
-        <field name="name">ir.attachment.tree (in worship_library)</field>
-        <field name="model">ir.attachment</field>
-        <field name="inherit_id" ref="TODO othermodule.tree_view"/>
-        <field name="arch" type="xml">
-        </field>
-    </record>
-    -->
+    
     <record model="ir.actions.act_window" id="ir_attachment_category_act_window">
         <field name="name">Categories</field>
         <field name="res_model">ir.attachment.category</field>
@@ -42,7 +18,6 @@
         <field name="view_mode">tree,form</field>
         <field name="domain">[('worship_related', '=', True)]</field>
         <field name="context" eval="{'default_worship_related': True}"/>
-        <field name="sequence" eval="1"/>
     </record>
 
     <!-- MENUS -->
