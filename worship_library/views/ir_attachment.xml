@@ -3,7 +3,7 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
 <odoo>
-    
+
     <record model="ir.actions.act_window" id="ir_attachment_category_act_window">
         <field name="name">Categories</field>
         <field name="res_model">ir.attachment.category</field>
@@ -30,14 +30,12 @@
 
     <record model="ir.ui.menu" id="ir_attachment_category_menu">
         <field name="name">Categories</field>
-        <field name="res_model">ir.attachment.category</field>
         <field name="parent_id" ref="worship_library_root"/>
         <field name="action" ref="ir_attachment_category_act_window"/>
         <field name="sequence" eval="1"/>
     </record>
      <record model="ir.ui.menu" id="ir_attachment_menu">
         <field name="name">Documents</field>
-        <field name="res_model">ir.attachment</field>
         <field name="parent_id" ref="worship_library_root"/>
         <field name="action" ref="ir_attachment_act_window"/>
         <field name="sequence" eval="2"/>
