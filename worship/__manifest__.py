@@ -2,20 +2,18 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    'name': 'Worship',
-    'summary': """
+    "name": "Worship",
+    "summary": """
         Adds base application for Worship management""",
-    'version': '13.0.1.0.0',
-    'license': 'AGPL-3',
-    'author': 'Denis Roussel,Odoo Community Association (OCA)',
+    "version": "14.0.1.0.0",
+    "license": "AGPL-3",
+    "author": "Denis Roussel,Odoo Community Association (OCA)",
     "application": True,
-    'depends': [
+    "depends": [
         "base",
     ],
-    'data': [
+    "data": [
         "views/menu.xml",
         "security/security.xml",
-    ],
-    'demo': [
     ],
 }
