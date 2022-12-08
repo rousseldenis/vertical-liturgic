@@ -1,7 +1,7 @@
 # Copyright 2019 Denis Roussel
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models, _
+from odoo import fields, models
 
 
 class WorshipMixin(models.AbstractModel):
@@ -10,5 +10,5 @@ class WorshipMixin(models.AbstractModel):
 
     worship_related = fields.Boolean(
         help="This is a technical field to represent models that were created"
-             "in a worship context",
+        "in a worship context",
     )
